@@ -49,7 +49,7 @@ public class ClientCommands {
     }
 
     public static int clearCommand(CommandContext<ServerCommandSource> context) {
-        File server = new File(mc.runDirectory, "client_aatool/server");
+        File server = ClientAATool.CLIENT_AATOOL_PATH.toFile();
         if (server.exists()) {
             if (server.delete()) {
                 sendToPlayer("Cleared ClientAATool Files");
@@ -83,7 +83,7 @@ public class ClientCommands {
 
     public static class FakeCommandSource extends ServerCommandSource {
         public FakeCommandSource(ClientPlayerEntity player) {
-            super(player, player.getPos(), player.getRotationClient(), null, 0, player.getEntityName(),
+            super(player, player.getPos(), player.getRotationClient(), null, 0, player.getNameForScoreboard(),
                     player.getName(), null, player);
         }
 

@@ -5,7 +5,6 @@
   "compatibilityLevel": "JAVA_16",
   "client": [
     "ClientAdvancementManager_saveMixin",
-    "ClientPlayerEntity_clientCommandsMixin",
     "ClientPlayNetworkHandler_clientCommandsMixin",
     "ClientPlayNetworkHandler_saveMixin",
     "MinecraftClient_serverChangeMixin",
